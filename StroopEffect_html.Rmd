@@ -3,7 +3,6 @@ title: "Stroop Effect"
 author: "Emilio Gozo"
 date: "August 3, 2016"
 output:
-  pdf_document: default
   html_document:
     keep_md: yes
 ---
@@ -21,7 +20,7 @@ In this experiment, the color of the printed words is the independent variable s
 
 The [dataset](https://www.google.com/url?q=https://drive.google.com/file/d/0B9Yf01UaIbUgQXpYb2NhZ29yX1U/view?usp%3Dsharing&sa=D&ust=1470121605931000&usg=AFQjCNGXGWmDkxvFjhd4PGaEq_Txhec2lw) contains results from *24* participants in the task. Each row of the dataset contains the performance for one participant, with the first number their results on the congruent task and the second number their performance on the incongruent task.
 
-\begin{center}\textbf{Table. 1 Summary Statistics}\end{center}
+<center>**Table. 1 Summary Statistics**</center>
 ```{r summarystats, echo=FALSE, message=FALSE}
 library(reshape2)
 library(dplyr)
@@ -51,16 +50,14 @@ p <- p + theme(text = element_text(size=12),
                  legend.position="bottom")
 print(p)
 ```
-\begin{center}\textbf{Figure 1. Congruent vs Incongruent Stroop Test}\end{center}
+<center>**Figure 1. Congruent vs Incongruent Stroop Test**</center>
 
 ## Hypothesis and Testing
 The aim of this project is to prove that the observed difference between the two datasets is significant. That is, the printed words have strong influence on the ability to say the color. It is appropriate to use t-test in this case since the sample size is very small (*n<30*) and that the population variance is unknown. The quantile-quantile plots in Fig. 2 shows that the datasets can be assumed to be normally distributed. Moreover, since the participant on both tasks are the same, a paired t-test should be used. The null hypothesis $H_0$ is that there is no significant difference between the two population means:
 
-\begin{center}
-$H_0: \mu_C = \mu_I$
+$$H_0: \mu_C = \mu_I$$
 
-$H_a: \mu_C \neq \mu_I$
-\end{center}
+$$H_a: \mu_C \neq \mu_I$$
 
 where $\mu_C$ and $\mu_I$ are the congruent and incongruent population means and $H_a$ is the alternative hypothesis.
 
@@ -110,7 +107,7 @@ p2 <- p2 + theme(text = element_text(size=12))
 
 grid.arrange(p1, p2, ncol=2)
 ```
-\begin{center}\textbf{Figure 2. QQ plots of the datasets}\end{center}
+<center>**Figure 2. QQ plots of the datasets**</center>
 
 
 ## Results
