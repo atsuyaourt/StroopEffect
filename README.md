@@ -13,7 +13,7 @@ In this experiment, the color of the printed words is the independent variable s
 
 The [dataset](https://www.google.com/url?q=https://drive.google.com/file/d/0B9Yf01UaIbUgQXpYb2NhZ29yX1U/view?usp%3Dsharing&sa=D&ust=1470121605931000&usg=AFQjCNGXGWmDkxvFjhd4PGaEq_Txhec2lw) contains results from *24* participants in the task. Each row of the dataset contains the performance for one participant, with the first number their results on the congruent task and the second number their performance on the incongruent task.
 
-\begin{center}\textbf{Table. 1 Summary Statistics}\end{center}
+<center>**Table. 1 Summary Statistics**</center>
 
 task             mean      sd
 ------------  -------  ------
@@ -22,23 +22,21 @@ Incongruent    22.016   4.797
 
 We can infer from Tab. 1 that on the average, participants took longer time to finish the incongruent task than the congruent task. This is illustrated more clearly by Fig. 1, note that the inter-quartile range (IQR) of the two datasets do not overlap which, may suggest strong difference between the two.
 
-<img src="StroopEffect_files/figure-html/plot1-1.png" style="display: block; margin: auto;" />
-\begin{center}\textbf{Figure 1. Congruent vs Incongruent Stroop Test}\end{center}
+<img src="StroopEffect_html_files/figure-html/plot1-1.png" style="display: block; margin: auto;" />
+<center>**Figure 1. Congruent vs Incongruent Stroop Test**</center>
 
 ## Hypothesis and Testing
 The aim of this project is to prove that the observed difference between the two datasets is significant. That is, the printed words have strong influence on the ability to say the color. It is appropriate to use t-test in this case since the sample size is very small (*n<30*) and that the population variance is unknown. The quantile-quantile plots in Fig. 2 shows that the datasets can be assumed to be normally distributed. Moreover, since the participant on both tasks are the same, a paired t-test should be used. The null hypothesis $H_0$ is that there is no significant difference between the two population means:
 
-\begin{center}
-$H_0: \mu_C = \mu_I$
+$$H_0: \mu_C = \mu_I$$
 
-$H_a: \mu_C \neq \mu_I$
-\end{center}
+$$H_a: \mu_C \neq \mu_I$$
 
 where $\mu_C$ and $\mu_I$ are the congruent and incongruent population means and $H_a$ is the alternative hypothesis.
 
 
-<img src="StroopEffect_files/figure-html/plot2-1.png" style="display: block; margin: auto;" />
-$\begin{center}\textbf{Figure 2. QQ plots of the datasets}\end{center}$
+<img src="StroopEffect_html_files/figure-html/plot2-1.png" style="display: block; margin: auto;" />
+<center>**Figure 2. QQ plots of the datasets**</center>
 
 
 ## Results
